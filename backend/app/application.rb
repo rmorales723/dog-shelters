@@ -17,6 +17,7 @@ class Application
       id = req.path_info.split('/dogs/').last 
       dog = Dog.find(id)
       dog.delete?
+      return [200, { 'Content-Type' => 'application/json' }, [ message: 'Dog deleted'.to_json ]]
     #elsif req.delete?
       #id = req.path_info.split('/shelters/').last 
       #shelter = Shelter.find(id)
