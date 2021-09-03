@@ -13,13 +13,18 @@ class Application
     elsif req.path.match(/dogs/) && req.post?
       data = JSON.parse req.body.read
       print data
-
+    elsif req.delete?
+      id = req.path_info.split('/dogs/').last 
+      dog = Dog.find(id)
+      dog.delete?
+    #elsif req.delete?
+      #id = req.path_info.split('/shelters/').last 
+      #shelter = Shelter.find(id)
+      #shelter.delete?
     else
       resp.write "Path Not Found"
 
     end
-
-    resp.finish
+      resp.finish
   end
-
 end
