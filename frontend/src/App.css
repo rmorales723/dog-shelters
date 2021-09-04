@@ -1,5 +1,23 @@
+@import 'bulma/css/bulma.css';
+
+
+
+img {
+  border: 2px solid #555;
+}
+
+h2 {
+  font-size: 25px;
+}
+
 .App {
   text-align: center;
+}
+
+.form-container-container {
+  height: 88vh ;
+  background-image: url("https://images.pexels.com/photos/2023384/pexels-photo-2023384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
 }
 
 .App-logo {
