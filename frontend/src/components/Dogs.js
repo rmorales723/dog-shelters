@@ -1,6 +1,7 @@
 import React from 'react';
 import Dog from './Dog';
 import NewDogForm from './NewDogForm';
+import {Link} from 'react-router-dom';
 
 
 class Dogs extends React.Component {
@@ -35,6 +36,7 @@ class Dogs extends React.Component {
         return (
             <>
                 <Link to="/dogs/new">New Dog</Link>
+                
                 <ul>{this.renderDogs()}</ul>
             </>
         )

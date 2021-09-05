@@ -19,9 +19,51 @@ h2 {
   text-align: center;
 }
 
+.new-dog-form {
+  height: 12vh;
+}
+
+img {
+  float: center;
+  width: 700px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.new-dog-form {
+  float: center;
+  flex: center;
+  height: 88vh ;
+  background-image: url('https://images.pexels.com/photos/2023384/pexels-photo-2023384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-repeat: no-repeat;
+  align: center;
+  background-size: contain;
+  border: 1px solid red;
+}
+
+/* .new-dog-form {
+  height: 88vh ;
+  background-image: img("https://images.pexels.com/photos/2023384/pexels-photo-2023384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
+} */
+
+.btn {
+  border:3px solid black;
+  background-color: blue;
+  color: white;
+  padding: 10px 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+input[type=text] {
+  border: 3px solid yellow;
+  border-radius: 4px;
+}
+
 .form-container-container {
   height: 88vh ;
-  background-image: url("https://images.pexels.com/photos/2023384/pexels-photo-2023384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-image: url("https://images.pexels.com/photos/4226696/pexels-photo-4226696.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
   background-size: cover;
 }
 
