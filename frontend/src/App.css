@@ -3,7 +3,12 @@
 
 
 img {
-  border: 2px solid #555;
+  border: 5px solid #555;
+}
+
+img {
+  width: 20%;
+  height: auto;
 }
 
 h2 {

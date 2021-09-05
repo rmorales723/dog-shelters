@@ -3,7 +3,7 @@ import './App.css';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Dogs from "./components/Dogs";
 import Shelters from "./components/Shelters";
-import FormContainer from "./components/FormContainer"
+import NewDogForm from "./components/NewDogForm"
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Switch>
         <Route exact path="/dogs" component={Dogs}/>
         <Route exact path="/shelters" component={Shelters}/>
-        <Route exact path="/dogs/new" component={FormContainer}/>
+        <Route exact path="/dogs/new" component={NewDogForm}/>
       </Switch>
     </Router>
     </div>
