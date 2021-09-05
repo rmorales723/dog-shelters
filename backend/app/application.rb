@@ -12,7 +12,9 @@ class Application
       return [200, { 'Content-Type' => 'application/json' }, [ dogs.to_json ]]
     elsif req.path.match(/dogs/) && req.post?
       data = JSON.parse req.body.read
-      print data
+      dog = Dog.create(data)
+      return [200, { 'Content-Type' => 'application/json' }, [ dog.to_json ]]
+
     elsif req.delete?
       id = req.path_info.split('/dogs/').last 
       dog = Dog.find(id)
