@@ -43,11 +43,11 @@ render() {
         <>
         <button button class="btn danger" onClick={() => this.props.history.goBack()}>Back</button>
             <form className="new-dog-form has-text-weight-bold has-text-black-bis" onSubmit= {this.handleOnSubmit}>
+                
             <p>Add a Dog</p>
             
                 <label htmlFor = "breed">Breed</label>
                 <input 
-                    
                     type="text" 
                     name="breed" 
                     value={this.state.breed}
@@ -84,9 +84,8 @@ render() {
 
                 <button type="submit">Submit</button>
             </form>   
-            <div className= "new-dog-form-container-container">
-                
-        </div>
+            <div className= "new-dog-form-container-container"> </div>
+           
 
         </>
     );

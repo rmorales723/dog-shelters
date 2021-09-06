@@ -2,6 +2,7 @@
 
 
 
+
 img {
   border: 5px solid #555;
 }
@@ -19,33 +20,18 @@ h2 {
   text-align: center;
 }
 
-.new-dog-form {
+.new-dog-form-container{
   height: 12vh;
+  border: 5px solid black;
 }
 
-img {
-  float: center;
-  width: 700px;
-  height: 400px;
-  object-fit: cover;
-}
-
-.new-dog-form {
-  float: center;
-  flex: center;
+.new-dog-form-container-container {
+  width: 100;
   height: 88vh ;
-  background-image: url('https://images.pexels.com/photos/2023384/pexels-photo-2023384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-  background-repeat: no-repeat;
-  align: center;
-  background-size: contain;
-  border: 1px solid red;
-}
-
-/* .new-dog-form {
-  height: 88vh ;
-  background-image: img("https://images.pexels.com/photos/2023384/pexels-photo-2023384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-image: url("https://images.pexels.com/photos/4226696/pexels-photo-4226696.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
   background-size: cover;
-} */
+}
+
 
 .btn {
   border:3px solid black;
@@ -61,11 +47,7 @@ input[type=text] {
   border-radius: 4px;
 }
 
-.form-container-container {
-  height: 88vh ;
-  background-image: url("https://images.pexels.com/photos/4226696/pexels-photo-4226696.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
-  background-size: cover;
-}
+
 
 .App-logo {
   height: 40vmin;

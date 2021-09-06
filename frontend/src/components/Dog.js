@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 
 
 
-class Dog extends React.Component {
+class Dog extends Component {
 
     render() {
         return (
@@ -11,8 +11,9 @@ class Dog extends React.Component {
                 <p>Name:{this.props.name}</p>
                 <p>AGE: {this.props.age}</p>
                 <p>SHELTER ID:  {this.props.shelter_id}</p>
-    <img className="dog-img" width="100%" src={this.props.img_url} alt=" " />
-                
+                <img className="dog-img" width="100%" src={this.props.img_url} alt=" " />
+
+            
             </div>
 
         )

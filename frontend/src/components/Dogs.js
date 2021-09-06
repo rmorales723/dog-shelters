@@ -4,6 +4,7 @@ import NewDogForm from './NewDogForm';
 import {Link} from 'react-router-dom';
 
 
+
 class Dogs extends React.Component {
     state = {
         dogs: []
@@ -14,6 +15,16 @@ class Dogs extends React.Component {
             .then(res => res.json())
             .then(dogs => this.setState({ dogs }));
     }
+
+    delete(item){
+          const newState = this.state.data.slice();
+            if (newState.indexOf(item) > -1) {
+            newState.splice(newState.indexOf(item), 1);
+            this.setState({data: newState})
+        }}
+
+    
+
 
     renderDogs = () => {
         return (
@@ -36,8 +47,7 @@ class Dogs extends React.Component {
         return (
             <>
                 <Link to="/dogs/new">New Dog</Link>
-                
-                <ul>{this.renderDogs()}</ul>
+                    <ul>{this.renderDogs()}</ul>
             </>
         )
     }
