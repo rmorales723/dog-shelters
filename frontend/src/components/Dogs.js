@@ -14,17 +14,7 @@ class Dogs extends React.Component {
         fetch("http://localhost:9292/dogs")
             .then(res => res.json())
             .then(dogs => this.setState({ dogs }));
-    }
-
-    delete(item){
-          const newState = this.state.data.slice();
-            if (newState.indexOf(item) > -1) {
-            newState.splice(newState.indexOf(item), 1);
-            this.setState({data: newState})
-        }}
-
-    
-
+    };
 
     renderDogs = () => {
         return (
@@ -46,7 +36,7 @@ class Dogs extends React.Component {
     render() {
         return (
             <>
-                <Link to="/dogs/new">New Dog</Link>
+                <Link class="button is-info"to="/dogs/new">New Dog</Link>
                     <ul>{this.renderDogs()}</ul>
             </>
         )

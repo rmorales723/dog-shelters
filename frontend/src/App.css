@@ -20,6 +20,24 @@ h2 {
   text-align: center;
 }
 
+<style>
+.container {
+  height: 200px;
+  position: relative;
+  border: 3px solid green;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+</style>
+
+
+
 .new-dog-form-container{
   height: 12vh;
   border: 5px solid black;

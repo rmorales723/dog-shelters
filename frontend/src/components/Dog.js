@@ -12,7 +12,12 @@ class Dog extends Component {
                 <p>AGE: {this.props.age}</p>
                 <p>SHELTER ID:  {this.props.shelter_id}</p>
                 <img className="dog-img" width="100%" src={this.props.img_url} alt=" " />
-
+                    
+                    <div class="container">
+                    <div class="center">
+                <button class="button is-danger"type="delete">DELETE</button>
+                    </div>
+                </div>
             
             </div>
 
