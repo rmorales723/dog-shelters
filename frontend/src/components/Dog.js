@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import NewDogForm from './NewDogForm'
 
 
 class Dog extends Component {
@@ -15,7 +15,7 @@ class Dog extends Component {
                     
                     <div class="container">
                     <div class="center">
-                <button class="button is-danger"type="delete">DELETE</button>
+                <button class="button is-danger" onClick={() => this.props.deleteDog()}>DELETE</button>
                     </div>
                 </div>
             

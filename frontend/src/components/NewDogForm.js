@@ -36,6 +36,22 @@ class NewDogForm extends React.Component {
         )
         
     }
+    deleteDog = (event) => {
+        event.preventDefault();
+    fetch(`http://localhost:9292/dogs/ + id`, {
+        method: "DELETE",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(this.state),
+      })
+    .then((response) => console.log(response))
+    .then((data) => {
+        console.log("deleted");
+        alert(`You deleted ${this.state.dog.name}`);
+        this.props.history.push("/dogs");
+    });
+    }
+
+
 
 
 render() {
