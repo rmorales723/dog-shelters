@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 2021_09_05_151612) do
     t.string "breed"
     t.string "name"
     t.integer "age"
-    t.integer "img"
     t.integer "shelter_id"
     t.string "img_url"
   end

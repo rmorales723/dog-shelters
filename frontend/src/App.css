@@ -1,5 +1,8 @@
 @import 'bulma/css/bulma.css';
 
+body{
+  background-image: url("./assets/palm-leaf.png");
+}
 
 
 
@@ -19,6 +22,7 @@ h2 {
 .App {
   text-align: center;
 }
+
 
 <style>
 .container {
