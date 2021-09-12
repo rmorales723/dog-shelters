@@ -11,7 +11,6 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/dogs" component={Dogs}/>
-        <Route exact path="/shelters" component={Shelters}/>
         <Route exact path="/dogs/new" component={NewDogForm}/>
       </Switch>
     </Router>
