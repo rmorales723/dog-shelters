@@ -6,10 +6,10 @@ class Application
 
     if req.path.match(/shelters/) && req.get?
       shelters = Shelter.all
-      shelters_with_dog = shelters.map do |shelter| 
-      {id: shelter.name, phone_number: shelter.phone_number, location: shelter.location}
+      shelter_with_dog = shelters.map do |shelter| 
+      {id: shelter.name, name: shelter.name, location: shelter.location}
       end
-      return [200, { 'Content-Type' => 'application/json' }, [ shelters_with_dog.to_json ]]
+      return [200, { 'Content-Type' => 'application/json' }, [ shelters.to_json ]]
     elsif  req.path.match(/dogs/) && req.get?
       dogs = Dog.all
       new_dogs = dogs.map do |dog|
@@ -27,7 +27,7 @@ class Application
       data = JSON.parse req.body.read
       puts data
       dog = Dog.create(data)
-      dog.shelter_id = 1
+      dog.id = 
       dog.save
       return [200, { 'Content-Type' => 'application/json' }, [ dog.to_json ]]
     elsif req.delete?
