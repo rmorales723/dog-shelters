@@ -3,12 +3,18 @@ import React from 'react'
 
 class NewDogForm extends React.Component {
     state = {
-        
+        shelters : [],
         breed : "",
         name: "",
         age: "",
         img_url: "",
         shelter_id: ""
+    };
+
+    componentDidMount() {
+        fetch("http://localhost:9292/shelters")
+            .then(res => res.json())
+            .then(shelters => this.setState({ shelters }));
     };
 
     handleOnChange = (event) => {
@@ -32,18 +38,26 @@ class NewDogForm extends React.Component {
         event.preventDefault();
         fetch("http://localhost:9292/dogs/new", this.addDog())
         .then(res => res.json())
-        .then((cars => this.props.history.push("/dogs"))
+        .then((dogs => this.props.history.push("/dogs"))
         )
         
     }
 
 
     render() {
+        console.log(this.state.shelters)
     return(
         <>
         <button button class="btn danger" onClick={() => this.props.history.goBack()}>Back</button>
             <form className="new-dog-form has-text-weight-bold has-text-black-bis" onSubmit= {this.handleOnSubmit}>
-                
+            <label htmlFor = "shelter">SHELTER</label>
+            <select value = {this.state.shelter_id} onChange={(e) =>this.setState({shelter_id:e.target.value})}>
+            {this.state.shelters.map(s => {
+                return (
+                    <option value={s.id}>{s.location}</option>
+                )
+                })}
+            </select>
             <p>Add a Dog</p>
             
                 <label htmlFor = "breed">Breed</label>

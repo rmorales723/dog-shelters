@@ -5,12 +5,6 @@ import NewDogForm from './NewDogForm'
 
 class Dog extends Component {
 
-    
-
-    
-
-
-
     render() {
         return (
             <div id={this.props.id}className="dog has-text-weight-bold ">

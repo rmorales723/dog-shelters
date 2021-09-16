@@ -39,26 +39,6 @@ class Dogs extends React.Component {
             });
         }
 
-    // renderShelters = () => {
-    //     console.log(this.state.shelters)
-    //     return this.state.shelters.map(shelters => {
-    //         return <option value={shelters.id}>{shelters.name}</option>
-    //     });
-    // }  
-       
-    // handleOnChange = (event) => {
-    //     this.setState({
-    //         [event.target.name] : event.target.value
-    //     });
-    //     const { value } = event.target;
-    //     if (value == "shelter")
-    //         return this.setState({ filterAllMovies: this.state.movies });
-    //     const filterAllMovies = this.state.movies.filter(movie => {
-    //         return movie.theater_id == value
-    //     })
-    //    // this.setState({ filterAllMovies })
-    //};   
-
 
     renderDogs = () => {
         return (
@@ -84,19 +64,12 @@ class Dogs extends React.Component {
         return (
             
             <>
-                {/* <select
-                        onChange={this.handleOnChange}
-                        name="shelter.name" id="">
-                        <option value="shelter"> SHELTER</option>
-                        {this.renderShelters()}
-                </select> */}
+                
                     <Link class="button is-info"to="/dogs/new">New Dog</Link>
                     <ul>{this.renderDogs()}</ul>
             </>
-    )
-    }
-    }
-
+        )}
+    };
 
 
 export default Dogs;
